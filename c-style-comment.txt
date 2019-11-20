@@ -1,0 +1,69 @@
+http://www.doxygen.nl/manual/docblocks.html
+
+总述
+1. file,class,struct,union,enum,function需要添加块注释
+/**
+  * A constructor.
+  * A more elaborate description of the constructor.
+  */
+2. 在VS Code里可以使用插件Doxygen Documentation Generator自动生成块注释
+2. 函数内部实现注释 使用行注释 //
+3. 注释要符合doxygen规范
+
+
+doxygen规范
+1. 文件注释
+  /**
+  * @file test-cpp.h
+  * @author Meihua Zhang (zhangmh@keenon.com)
+  * @brief doxygen style for cpp
+  *
+  * @version 0.1
+  * @date 2019-11-20
+  *
+  * @copyright Copyright (c) 2019
+  *
+  */
+
+2. 函数注释-声明
+  函数的输入输出.
+  对类成员函数而言: 函数调用期间对象是否需要保持引用参数, 是否会释放这些参数.
+  函数是否分配了必须由调用者释放的空间.
+  参数是否可以为空指针.
+  是否存在函数使用上的性能隐患.
+  如果函数是可重入的, 其同步前提是什么?
+  F.e:
+  /**
+    * @brief 函数作用
+    *
+    * @param [in] a an integer argument.
+    * @param [out] s a constant character pointer.
+    * @return int
+    */
+
+3. 函数注释-实现
+  所使用的编程技巧, 实现的大致步骤, 或解释如此实现的理由
+  F.e:
+  /**
+    * @brief 实现的细节 包括设计思路/技术技巧/工作原理等
+    * 
+    */
+
+4. 类成员变量，全局变量需要添加注释
+  /**
+    * @brief 用途
+    * 
+    */
+  或者
+  ///< 用途
+
+5. enum,union注释
+  /**
+    * @brief 用途
+    * 
+    */
+
+6. TODO注释
+  TODO 注释要使用全大写的字符串 TODO, 在随后的圆括号里写上你的名字, 邮件地址, bug ID, 或其它身份标识和与这一 TODO 相关的 issue
+  F.e:
+  // TODO(Zeke) change this to use relations.

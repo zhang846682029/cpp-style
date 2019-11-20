@@ -1,0 +1,16 @@
+https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/
+
+1. 使用Google风格 明显特征是
+2. 缩进使用2个space
+
+F.e:
+void hello(void) {      // 大括号不换行
+  printf("hello ");     // 缩进两个space
+  printf("world !\n");  
+}
+
+VS Code 设置方法
+{
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "editor.tabSize": 2
+}
